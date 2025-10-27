@@ -1,0 +1,281 @@
+/* -------------------------------------------------------------------------
+   1. ROOT & CSS VARIABLES (Pastel Pink Theme)
+   ------------------------------------------------------------------------- */
+:root {
+  --primary-color: #e58ca8;
+  --light-bg-body: #f7f7f7;
+  --light-bg-card: #ffffff;
+  --light-text-default: #333333;
+
+  --dark-bg-body: #1a1a1a;
+  --dark-bg-card: #2a2a2a;
+  --dark-text-default: #e5e5e5;
+}
+
+/* -------------------------------------------------------------------------
+   2. BODY & DARK MODE STYLES
+   ------------------------------------------------------------------------- */
+
+/* Default Body (Light Mode) */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-bg-body);
+  color: var(--light-text-default);
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure footer stays at the bottom */
+main {
+  flex: 1;
+}
+
+/* Dark Mode Overrides */
+body.dark {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+body.dark .text-gray-900 {
+  color: #e5e5e5;
+}
+
+body.dark .text-gray-600 {
+  color: #b3b3b3;
+}
+
+body.dark .text-gray-700 {
+  color: #cccccc;
+}
+
+/* -------------------------------------------------------------------------
+   3. NAVIGATION LINKS
+   ------------------------------------------------------------------------- */
+.nav-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 1.125rem; /* text-lg */
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Underline effect for desktop navigation links */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.125rem; /* 2px */
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* -------------------------------------------------------------------------
+   4. EDUCATION TABLE STYLES
+   ------------------------------------------------------------------------- */
+.education-table th {
+  background-color: #f8dae1;
+  color: #333333;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+body.dark .education-table th {
+  background-color: #583344;
+  color: #f7f7f7;
+}
+
+.education-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.education-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+body.dark .education-table tr:hover {
+  background-color: #262626;
+}
+
+/* -------------------------------------------------------------------------
+   5. RESPONSIVE TABLE (Mobile)
+   ------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .education-table thead {
+    display: none; /* Hide header on mobile */
+  }
+
+  .education-table tbody tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    background-color: var(--light-bg-card);
+  }
+
+  body.dark .education-table tbody tr {
+    border-color: #374151;
+  }
+
+  .education-table td {
+    display: block;
+    text-align: right;
+    position: relative;
+    padding-left: 8rem;
+  }
+
+  .education-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  body.dark .education-table td::before {
+    color: #f9a8d4;
+  }
+
+  /* Assign Labels for Mobile View */
+  .education-table tbody tr td:nth-child(1)::before {
+    content: "Period:";
+  }
+
+  .education-table tbody tr td:nth-child(2)::before {
+    content: "Qualification:";
+  }
+
+  .education-table tbody tr td:nth-child(3)::before {
+    content: "Institution:";
+  }
+
+  .education-table tbody tr td:nth-child(4)::before {
+    content: "Location:";
+  }
+}
+/* -------------------------------------------------------------------------
+   6. TYPING EFFECT ANIMATION
+   ------------------------------------------------------------------------- */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary-color);
+  }
+}
+
+.typing-text {
+  width: 0; /* Starts hidden */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--primary-color);
+  animation: blink-caret 0.75s step-end infinite;
+  transition: width 0.3s ease-in-out;
+}
+
+/* -------------------------------------------------------------------------
+   7. THEME TOGGLE BUTTON
+   ------------------------------------------------------------------------- */
+
+.theme-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--light-bg-card);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.theme-toggle .moon {
+  display: none;
+}
+
+body.dark .theme-toggle {
+  background-color: #2a2a2a;
+  border-color: #e58ca8;
+  color: #f9a8d4;
+}
+
+body.dark .theme-toggle .sun {
+  display: none;
+}
+
+body.dark .theme-toggle .moon {
+  display: inline;
+}
+
+body {
+  background-color: var(--light-bg-body);
+  color: var(--light-text-default);
+}
+
+body.dark {
+  background-color: var(--dark-bg-body);
+  color: var(--dark-text-default);
+}
+
+/* Card or section boxes */
+.card,
+section,
+article {
+  background-color: var(--light-bg-card);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .card,
+body.dark section,
+body.dark article {
+  background-color: var(--dark-bg-card);
+  color: var(--dark-text-default);
+}
+
+img {
+  border: 4px solid #f472b6; /* Tailwind's pink-400 */
+  border-radius: 0.5rem;     /* same as rounded-lg */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}

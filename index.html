@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Anis Syamimi's CV </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body class="light">
+    <script>lucide.createIcons();</script>
+
+<header class="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-extrabold text-pink-500">Portfolio</h1>
+
+  <!-- Navigation --> 
+  <nav class="hidden md:flex space-x-8 text-gray-700 dark:text-gray-200"> 
+    <a href="#about" class="hover:text-pink-500">About Me</a>
+    <a href="#education" class="hover:text-pink-500">Education</a> 
+    <a href="#skills" class="hover:text-pink-500">Skills</a>
+    <a href="#projects" class="hover:text-pink-500">Projects</a>
+    <a href="#contact" class="hover:text-pink-500">Contact</a> 
+</nav>
+ 
+
+ <!-- Theme Toggle Button -->
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+  <span class="sun">☀️</span>
+  <span class="moon">🌙</span>
+</button>
+
+<!-- Mobile Menu Icon -->
+      <button class="md:hidden p-2 text-gray-600 dark:text-gray-300">
+        <i data-lucide="menu" class="h-6 w-6"></i>
+      </button>
+    </div>
+  </header>
+
+<section id="about" class="py-20 bg-gray-50 dark:bg-gray-900">
+  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Profile Image -->
+    <div class="flex justify-center">
+      <img src="assets/photos/anisphoto.jpg" 
+           alt="Anis Syamimi" 
+           class="w-64 h-64 rounded-full object-cover ring-4 ring-pink-400 shadow-lg transition-transform duration-300 hover:scale-105">
+    </div>
+
+    <div>
+      <h3 class="text-pink-500 font-semibold text-lg">Hi there! I'm</h3>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Anis Syamimi</h1>
+      <p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+        I am 19 years old. I love exploring new things such as how the technology works to make our everyday life better. I'm currently pursuing a
+        <strong>Bachelor of Information Technology (Hons)</strong> at 
+        <strong>Universiti Teknologi PETRONAS (UTP)</strong>. 
+        In my meantime, I enjoy <strong>reading books and playing the piano</strong>.
+        My dream is to be a successful data analyst who can contribute the very best to my surroundings, no matter during or outside of work.
+        
+      </p>
+
+<!-- Action Buttons -->
+      <div class="flex space-x-4 mt-6">
+        <a href="assets/docs/resume_anis.pdf" download="Anis_Syamimi_Resume.pdf" id="downloadResume" 
+           class="px-6 py-3 bg-pink-500 text-white font-semibold rounded-md shadow hover:bg-pink-600 transition">
+             Resume
+        </a>
+
+
+        <a href="https://github.com/anishisamudin-art" target="_blank"
+           class="px-6 py-3 border border-pink-400 text-pink-500 font-semibold rounded-md hover:bg-pink-50 dark:hover:bg-gray-800 transition">
+          GitHub
+        </a>
+
+        <a href="https://linkedin.com/in/anis-syamimi-7137aa315" target="_blank"
+           class="px-6 py-3 border border-pink-400 text-pink-500 font-semibold rounded-md hover:bg-pink-50 dark:hover:bg-gray-800 transition">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section id="education" class="mb-20 pt-16 -mt-16">
+            <h2 class="text-4xl font-bold text-center mb-10 text-gray-900 dark:text-gray-100">My Educational Journey</h2>
+            <div class="overflow-x-auto shadow-xl rounded-xl">
+                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 education-table">
+                    <thead>
+                        <tr>
+                            <th>Period</th>
+                            <th>Qualification / Level</th>
+                            <th>Institution</th>
+                            <th class="hidden md:table-cell">City / Country</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                        <tr><td>2013 - 2018</td><td class="font-semibold">Primary School Education</td><td>SK Taman Bukit Subang</td><td class="hidden md:table-cell">Shah Alam, Selangor </td></tr>
+                        <tr><td>2019 - 2023 </td><td class="font-semibold">High School Education</td><td> SBPI Tun Abdul Razak</td><td class="hidden md:table-cell">Pekan, Pahang</td></tr>
+                        <tr><td>2024 - 2025 </td><td class="font-semibold">Foundation in Information Technology</td><td>Universiti Teknologi Petronas</td><td class="hidden md:table-cell">Seri Iskandar, Perak</td></tr>
+                        <tr><td> 2025 - Present </td><td class="font-semibold">Bachelor in Information Technology (Hons) </td><td>Universiti Teknologi Petronas</td><td class="hidden md:table-cell">Seri Iskandar, Perak</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-20 pt-16 -mt-16">
+            <h2 class="text-4xl font-bold text-center mb-10 text-gray-900 dark:text-gray-100">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border-t-4 border-[color:var(--primary-color)]">
+                    <h3 class="text-2xl font-semibold mb-4 text-[color:var(--primary-color)] dark:text-pink-400 flex items-center"><span data-lucide="code" class="mr-2"></span> Languages</h3>
+                    <ul class="space-y-2 list-disc list-inside text-gray-600 dark:text-gray-300">
+                        <li>Python</li><li>JavaScript</li><li>HTML5 & CSS3</li><li>SQL </li><li>C++</li><li>C#</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border-t-4 border-[color:var(--primary-color)]">
+                    <h3 class="text-2xl font-semibold mb-4 text-[color:var(--primary-color)] dark:text-pink-400 flex items-center"><span data-lucide="tool" class="mr-2"></span> Soft Skills</h3>
+                    <ul class="space-y-2 list-disc list-inside text-gray-600 dark:text-gray-300">
+                        <li>Teamwork & Collaboration</li><li>Problem Solving</li><li>Creativity & Innovation</li><li>Effective Communication</li><li>Time Management</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border-t-4 border-[color:var(--primary-color)]">
+                    <h3 class="text-2xl font-semibold mb-4 text-[color:var(--primary-color)] dark:text-pink-400 flex items-center"><span data-lucide="tool" class="mr-2"></span>Language</h3>
+                 <ul class="space-y-2 list-disc list-inside text-gray-600 dark:text-gray-300">
+                        <li>Malay</li><li>English</li><li>Arabic</li><li>French</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mb-20 pt-16 -mt-16">
+            <h2 class="text-4xl font-bold text-center mb-10 text-gray-900 dark:text-gray-100">Projects & Achievements</h2>
+            <div class="space-y-12">
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden md:flex">
+                    <div class="md:w-1/2 p-6 md:p-8">
+                        <h3 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2"> Pro Fit - Real Time Sports Facility Availability & Equipment Rental System</h3>
+                        <h4 class="text-xl text-[color:var(--primary-color)] dark:text-pink-400 mb-4">FCT0025 - Visual Programming 2024 Coursework</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4"> During Oh My Code, a competition where students have to develop a innovative website using Visual Basic, me and my teammates have successfully developed a web-based project which was a slot availability system called "Pro Fit Sports" that allows UTP students to check real-time sports availability, rent equipment and access club information through a user-friendly interface.</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="assets/photos/profit.jpg" 
+                             alt="Screenshot of the login page of the website."
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden md:flex flex-row-reverse">
+                    <div class="md:w-1/2 p-6 md:p-8">
+                        <h3 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">Champion, Oh My Code 2024</h3>
+                        <h4 class="text-xl text-[color:var(--primary-color)] dark:text-pink-400 mb-4">Team Member, Problem Solving</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Me and my teammates were awarded 1st place for developing “Pro Fit Sports,” which is an innovative slot availability system that enhances student access to sports facilities through real-time venue updates, equipment rentals, and an interactive user interface. We were recognized for creativity, functionality, and alignment with Sustainable Development Goal 8.</p>
+                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400 flex items-center"><span data-lucide="calendar" class="h-4 w-4 mr-1"></span> November 2024</span>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="assets/photos/omc.jpg" 
+                            alt="Anis Syamimi profile photo"
+                         class="w-full h-full object-cover rounded-lg shadow-lg border-4 border-pink-400">
+                    </div>
+                </div>
+        </section>
+
+        <section id="contact" class="pt-10 pb-20">
+  <h2 class="text-4xl font-bold text-center mb-10 text-gray-900 dark:text-gray-100">
+    Contact Information
+  </h2>
+
+  <div class="max-w-xl mx-auto p-8 bg-white dark:bg-gray-900 border-4 border-[#E58CA8] rounded-2xl shadow-lg dark:shadow-pink-500/20 flex flex-col items-center space-y-6">
+    
+    <!-- Friendly Intro -->
+    <p class="text-center text-lg text-gray-600 dark:text-gray-300">
+      Feel free to reach out if you’d like to chat or share ideas!
+    </p>
+
+    <!-- Email -->
+    <div class="flex items-center justify-center space-x-3">
+      <span data-lucide="mail" class="h-6 w-6 text-[#E58CA8] dark:text-pink-400"></span>
+      <p class="text-gray-800 dark:text-gray-100">
+        Email: anis_24003270@utp.edu.my
+      </p>
+    </div>
+
+    <!-- Phone -->
+    <div class="flex items-center justify-center space-x-3">
+      <span data-lucide="phone" class="h-6 w-6 text-[#E58CA8] dark:text-pink-400"></span>
+      <p class="text-gray-800 dark:text-gray-100">
+        Phone Number: (+60) 17-2020195
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-6 dark:bg-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; <span id="year"></span> Anis Syamimi | TFB1063 WAIP Assignment</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
